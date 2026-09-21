@@ -6,7 +6,7 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 09:33:44 by cacortes          #+#    #+#             */
-/*   Updated: 2026/09/21 17:19:37 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/09/21 19:46:58 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class	Span
 		~Span();
 
 		Span(unsigned int N);
-		void addNumber(unsigned int num);
+		void addNumber(int num);
 		int shortestSpan();
 		int longestSpan();
 
@@ -41,7 +41,14 @@ class	Span
 		{
 			while (begin != end)
 			{
-				addNumber(*begin);
+				try
+				{
+					addNumber(*begin);
+				}
+				catch (const ElementsStoredException& e)
+				{
+					std::cerr << "Error caught: " << e.what() << std::endl;
+				}
 				++begin;
 			}
 		}

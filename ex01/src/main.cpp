@@ -6,7 +6,7 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 09:32:33 by cacortes          #+#    #+#             */
-/*   Updated: 2026/09/21 17:36:26 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/09/21 19:38:44 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main()
 	
 	std::cout << "\n===== DEFAULT TEST ====="<< std::endl;
 
-	Span	first(5);
+	Span	first(3);
 	
 	std::vector<int> numbers;
 	
@@ -87,6 +87,22 @@ int	main()
 
 	mainTester(third);	
 
+	
+	std::cout << "\n===== NEGATIVE NUMBERS TEST ====="<< std::endl;
+
+	Span	fourth(5);
+	
+	std::vector<int> nonumbers;
+	
+	nonumbers.push_back(10);
+	nonumbers.push_back(-5);
+	nonumbers.push_back(3);
+	nonumbers.push_back(-3);
+	nonumbers.push_back(50);
+
+	fourth.addSomeNumbers(nonumbers.begin(), nonumbers.end());
+
+	mainTester(fourth);
 	
 	std::cout << "\n===== END ====="<< std::endl;
 	

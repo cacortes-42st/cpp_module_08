@@ -6,7 +6,7 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 09:33:57 by cacortes          #+#    #+#             */
-/*   Updated: 2026/09/21 17:17:53 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/09/21 19:33:01 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,11 @@ Span::Span(const Span &other)
 
 Span &Span::operator=(const Span &value)
 {
-	if (this == &value)
-		return *this;
+	if (this != &value)
+	{
+		this->N = value.N;
+		this->IntArray = value.IntArray;
+	}
 
 	std::cout << "Span assigment operator called." << std::endl;
 
@@ -45,7 +48,7 @@ Span::Span(unsigned int v)
 }
 
 
-void Span::addNumber(unsigned int num)
+void Span::addNumber(int num)
 {
 
 	if (this->IntArray.size() != this->N)		
