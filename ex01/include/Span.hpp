@@ -6,7 +6,7 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 09:33:44 by cacortes          #+#    #+#             */
-/*   Updated: 2026/09/20 19:51:07 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/09/21 17:19:37 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,16 @@ class	Span
 		int shortestSpan();
 		int longestSpan();
 
+		template <typename it>
+		void addSomeNumbers(it begin, it end)
+		{
+			while (begin != end)
+			{
+				addNumber(*begin);
+				++begin;
+			}
+		}
+		
 	class	ElementsStoredException : public std::exception
 	{
 		public:

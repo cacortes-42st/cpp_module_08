@@ -6,7 +6,7 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 09:32:33 by cacortes          #+#    #+#             */
-/*   Updated: 2026/09/20 19:56:07 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/09/21 17:36:26 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	mainTester(Span &first)
 		int result1 = first.shortestSpan();
 		int result2 = first.longestSpan();
 
-		std::cout << "El menor es: " << result1 << std::endl;
-		std::cout << "El mayor es: " << result2 << std::endl;
+		std::cout << "The shortest is: " << result1 << std::endl;
+		std::cout << "The longest is: " << result2 << std::endl;
 	}
 	catch (const std::exception& e)
 	{
@@ -43,17 +43,52 @@ int	main()
 	std::cout << sp.shortestSpan() << std::endl;
 	std::cout << sp.longestSpan() << std::endl;
 
+	
 	std::cout << "\n===== DEFAULT TEST ====="<< std::endl;
 
 	Span	first(5);
 	
 	std::vector<int> numbers;
 	
-	int array[] = {1, 2, 3, 4, 5};
+	numbers.push_back(10);
+	numbers.push_back(20);
+	numbers.push_back(30);
+	numbers.push_back(40);
+	numbers.push_back(50);
 
-	first.addNumbers(numbers.begin(), numbers.end());
+	first.addSomeNumbers(numbers.begin(), numbers.end());
 
 	mainTester(first);
 
+
+	std::cout << "\n===== ONE NUMBER TEST ====="<< std::endl;
+
+	Span	second(5);
+	
+	std::vector<int> number;
+	
+	number.push_back(10);
+
+	second.addSomeNumbers(number.begin(), number.end());
+
+	mainTester(second);	
+
+
+	std::cout << "\n===== SO MUCH NUMBERS TEST ====="<< std::endl;
+
+	Span	third(15000);
+	
+	std::vector<int> block(15000);
+	
+	for (unsigned int i = 0; i < block.size(); i++)
+		block[i] = i;
+
+	third.addSomeNumbers(block.begin(), block.end());
+
+	mainTester(third);	
+
+	
+	std::cout << "\n===== END ====="<< std::endl;
+	
 	return (0);
 }
