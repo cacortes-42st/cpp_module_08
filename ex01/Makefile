@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+         #
+#    By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/20 09:55:14 by cacortes          #+#    #+#              #
-#    Updated: 2026/09/20 14:52:05 by cacortes         ###   ########.fr        #
+#    Updated: 2026/09/23 10:40:56 by cacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = src/main.cpp src/Span.cpp
-NAME = array
+NAME = span
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -Iinclude

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 09:33:57 by cacortes          #+#    #+#             */
-/*   Updated: 2026/09/21 19:33:01 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/09/23 10:51:14 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ Span::Span(unsigned int v)
 void Span::addNumber(int num)
 {
 
-	if (this->IntArray.size() != this->N)		
+	if (this->IntArray.size() < this->N)		
 		this->IntArray.push_back(num);
 	else 
 		throw ElementsStoredException();
