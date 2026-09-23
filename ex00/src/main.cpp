@@ -6,7 +6,7 @@
 /*   By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 12:52:26 by cacortes          #+#    #+#             */
-/*   Updated: 2026/09/23 10:32:34 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/09/23 10:34:56 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int	main()
 	{
 		std::cerr << "Ocurrence NOT Found." << std::endl;
 	}
-		return (0);
+	
+	return (0);
 }
