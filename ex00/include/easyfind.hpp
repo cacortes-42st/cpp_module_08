@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 12:52:38 by cacortes          #+#    #+#             */
-/*   Updated: 2026/09/19 20:49:30 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/09/23 10:27:14 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	easyfind(T &container, int intg)
 	if (it != container.end())
 		std::cout << "Ocurrence FOUND!!" << std::endl;
 	else
-		std::cout << "Ocurrence NOT found." << std::endl;
+		throw std::exception();
 }
 
 #endif

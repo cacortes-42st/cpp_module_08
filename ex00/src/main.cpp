@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 12:52:26 by cacortes          #+#    #+#             */
-/*   Updated: 2026/09/19 20:59:11 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/09/23 10:32:34 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,13 @@ int	main()
 	num2.push_back(10);
 	num2.push_back(20);
 	
-	easyfind(num2, 50);
-	return (0);
+	try
+	{
+		easyfind(num2, 50);
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << "Ocurrence NOT Found." << std::endl;
+	}
+		return (0);
 }
