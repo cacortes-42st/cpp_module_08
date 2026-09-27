@@ -34,17 +34,16 @@ This exercise introduces the use of **STL containers, iterators and algorithms**
 
 * Create a class `Span` that:
   * Stores a maximum of `N` (`unsigned int`) integers. Been `N` the only parameter in its constructor.
-  * Provides an `addNumber()` member function to add a single number.
-  * Throws an exception when trying to add a new number after reaching the maximum capacity.
-  * Provides `shortestSpan()` to find the shortest distance between the stored numbers.
-  * Provides `longestSpan()` to find the longest distance between the stored numbers.
-  * Throws an exception when there are fewer than two numbers stored.
-* Implement a member function that allows filling the `Span` using a range of iterators.
+  * Has implemented an `addNumber()` member function to add a single number to the Span object. And after reaching the maximum capacity of the object it throws an exception.
+  * Has implemented `shortestSpan()` to find the shortest distance between each one of the stored numbers.
+  * Has implemented `longestSpan()` to find the longest distance between each one of the stored numbers.
+  * Throws an exception when there are fewer than two numbers stored (less or equal that one).
+* Implement a member function (`addSomeNumbers`) that allows filling the `Span` using a range of iterators.
 * Test the class with at least 10,000 numbers.
 
 ### What can we learn about this exercise?:
 
-This exercise focuses on **STL containers, iterators and algorithms**, while working with a class that stores a limited number of integers and calculates distances between them.
+This exercise focuses deeper on **STL containers, iterators and algorithms**, while working with a class that stores a limited number of integers and calculates distances between them.
 
 ### Output example:
 
@@ -55,15 +54,9 @@ This exercise focuses on **STL containers, iterators and algorithms**, while wor
 
 ### Mandatory requirements completed:
 
-* Create a `MutantStack` class implemented in terms of `std::stack`.
-* The class must offer:
+* Create a `MutantStack` class implemented in terms of `std::stack`. The class must offer:
   * All the member functions provided by `std::stack`.
-  * Additional iterator support.
-* The iterator interface must allow operations such as:
-  * `begin()`
-  * `end()`
-  * Incrementing and decrementing iterators.
-  * Dereferencing iterators.
+  * Additional iterator support (adding functions like `begin()` and `end()` from the stack internal container that is iterable).
 * The behavior of the `MutantStack` should produce the same output as the equivalent test using another iterable STL container, such as `std::list`.
 
 ### What can we learn about this exercise?:
@@ -72,7 +65,7 @@ This exercise introduces **STL container adapters and iterators**, extending `st
 
 ### Output example:
 
-![Example](images/ex00-output.png)
+![Example](images/ex02-output.png)
 
 
 #### Last but not least, check out these other repositories if you feel lost, they helped me a lot through the project:
